@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{776706
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISLogReader.Tests", "IISLogReader.Tests\IISLogReader.Tests.csproj", "{27BFE56D-1198-43D3-9F8D-03430749A2CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISLogAnalyzer", "IISLogAnalyzer\IISLogAnalyzer.csproj", "{801CD5DD-72E7-4D57-81DD-BB7C5CA9700F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISLogAnalyzer.Tests", "IISLogAnalyzer.Tests\IISLogAnalyzer.Tests.csproj", "{6FF0DC4D-4EF8-4BCA-8078-97FDD560DBBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{27BFE56D-1198-43D3-9F8D-03430749A2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27BFE56D-1198-43D3-9F8D-03430749A2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27BFE56D-1198-43D3-9F8D-03430749A2CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{801CD5DD-72E7-4D57-81DD-BB7C5CA9700F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801CD5DD-72E7-4D57-81DD-BB7C5CA9700F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801CD5DD-72E7-4D57-81DD-BB7C5CA9700F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801CD5DD-72E7-4D57-81DD-BB7C5CA9700F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF0DC4D-4EF8-4BCA-8078-97FDD560DBBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF0DC4D-4EF8-4BCA-8078-97FDD560DBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF0DC4D-4EF8-4BCA-8078-97FDD560DBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF0DC4D-4EF8-4BCA-8078-97FDD560DBBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

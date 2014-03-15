@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "DisplayLogFile";
+}
+
+<h2>DisplayLogFile</h2>
+
+<h1>Errors</h1>
+<table class="table">
+
+    <tr>
+         <th>Date</th>
+        <th>Time</th>
+        <th>Client IP</th>
+        <th>Uri</th>
+        <th>Http Status</th>
+        <th>Block IP</th>
+    </tr>
+
+    @foreach (dynamic logEntry in (((List<IISLogReader.LogEntry>)ViewBag.ErrorLogEntries)))
+    {
+        <tr>
+            <td>@logEntry.date</td>
+            <td>@logEntry.time</td>
+            <td>@logEntry.cip</td>
+            <td>@logEntry.csuristem</td>
+            <td>@logEntry.scstatus</td>
+            <td><input type="button" onclick="block('@logEntry.cip')" value="block" /></td>
+        </tr>
+    }
+
+</table>
+
+<h1>Success</h1>
+<table class="table">
+
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Client IP</th>
+        <th>Uri</th>
+        <th>Http Status</th>
+    </tr>
+
+    @foreach (dynamic logEntry in (((List<IISLogReader.LogEntry>)ViewBag.SuccessLogEntries)))
+    {
+        <tr>
+            <td>@logEntry.date</td>
+            <td>@logEntry.time</td>
+            <td>@logEntry.cip</td>
+            <td>@logEntry.csuristem</td>
+            <td>@logEntry.scstatus</td>
+        </tr>
+    }
+
+</table>
+
+<script>
+
+    function block(ip)
+    {
+        $.ajax("/Log/BlockIP?ip=" + ip, { success: function (value) { alert(value); }});
+    }
+</script>
